@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="500dp"
+            android:layout_height="380dp"
+            android:contentDescription="@string/logo_desc"
+            android:padding="10dp"
+            android:src="@drawable/yarn_icon"
+            tools:ignore="VisualLintBounds" />
+
+        <!-- Email Field -->
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="337dp"
+            android:layout_height="79dp"
+            android:layout_marginBottom="16dp"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/login_background"
+            android:fontFamily="@font/babydoll"
+            android:gravity="center"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            tools:ignore="TextContrastCheck" />
+
+        <!-- Password Field with Visibility Toggle -->
+        <RelativeLayout
+            android:layout_width="337dp"
+            android:layout_height="79dp"
+            android:layout_marginBottom="24dp">
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="password"
+                android:background="@drawable/login_background"
+                android:fontFamily="@font/babydoll"
+                android:gravity="center"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888"
+                tools:ignore="TextContrastCheck" />
+
+            <ImageView
+                android:id="@+id/togglePasswordVisibility"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/yarn_icon"
+                android:contentDescription="@string/toggle_password_visibility" />
+        </RelativeLayout>
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#ED44F2"
+            android:fontFamily="@font/babydoll"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            tools:ignore="TextContrastCheck" />
+
+        <!-- Register Text -->
+        <TextView
+            android:id="@+id/registerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:fontFamily="@font/babydoll"
+            android:textColor="#ED44F2"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:padding="12dp"
+            android:gravity="center" />
+
+        <!--Skip button -->
+        <TextView
+            android:id="@+id/skipText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/skip"
+            android:fontFamily="@font/babydoll"
+            android:textColor="#ED44F2"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:padding="12dp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+</RelativeLayout>

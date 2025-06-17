@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popup_background"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_bookmark"
+            app:tint="#000000" />
+
+        <TextView
+            android:id="@+id/savedProjects"
+            android:layout_width="123dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/babydoll"
+            android:text="@string/saved_projects"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            tools:ignore="TextSizeCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:importantForAccessibility="no"
+        android:padding="8dp"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_upload"
+            app:tint="#000000"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/uploadProject"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/babydoll"
+            android:text="@string/upload_new_project"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:importantForAccessibility="no"
+        android:padding="8dp"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_gallery"
+            app:tint="#000000"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/openGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/babydoll"
+            android:layout_marginStart="8dp"
+            android:text="@string/gallery"
+            android:textSize="18sp"
+            android:textColor="#000000" />
+    </LinearLayout>
+</LinearLayout>

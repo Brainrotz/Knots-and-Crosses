@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".UploadProjectActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top Bar: Home + Save Button -->
+
+        <!-- Image Upload Section -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:paddingStart="70dp"
+            tools:ignore="RtlSymmetry">
+
+            <ImageButton
+                android:id="@+id/homeButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/home"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_home"
+                tools:ignore="ImageContrastCheck" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="70dp"
+                android:backgroundTint="#F5BDD8"
+                android:fontFamily="@font/babydoll"
+                android:text="@string/save_project"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/addImageSection"
+            android:layout_width="211dp"
+            android:layout_height="185dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:id="@+id/imageUploadView"
+                android:layout_width="215dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/add_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_add_image_placeholder" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Project Title -->
+        <EditText
+            android:id="@+id/projectTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/project_title"
+            android:inputType="textCapWords"
+            android:fontFamily="@font/babydoll"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <!-- Resources Section -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/resourcesCard"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints=""
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="8dp">
+
+            <EditText
+                android:id="@+id/resourcesNeeded"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/resources_needed"
+                android:inputType="textMultiLine"
+                android:minLines="4"
+                android:fontFamily="@font/babydoll"
+                android:padding="8dp"
+                android:textColor="#000"
+                android:textColorHint="#757575" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Project Details -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/projectDetailsSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="8dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/writtenTutorial"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="top"
+                    android:hint="@string/written_tutorial"
+                    android:inputType="textMultiLine"
+                    android:minLines="10"
+                    android:fontFamily="@font/babydoll"
+                    android:padding="8dp"
+                    android:textColor="#000"
+                    android:textColorHint="#757575" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
